@@ -14,6 +14,7 @@ function draw() {
     x=x+5;
     //This is the if statement that shows if the position of the circle reaches 800, a new circle needs to be drawn on the left-hand side of the screen.
     if(x >= 800) {
-        circle(20, 100, r);
+        x=0;
+        //circle(x, 100, r);
     }
 }
