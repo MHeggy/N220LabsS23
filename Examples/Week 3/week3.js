@@ -12,9 +12,9 @@ function draw() {
     line1.y = mouseY;
   }
   
-  let zah = distance( line1, { x: mouseX, y: mouseY });
+  let l1distance = distance( line1, { x: mouseX, y: mouseY });
   
-  if(zah > 120) {
+  if(l1distance > 120) {
     stroke("#FF0000");
   } else {
     stroke("#000000");
@@ -29,5 +29,5 @@ function distance(p1, p2) {
   let dy = p1.y - p2.y;
   
   //return the distance
-   Math.sqrt(dx*dx + dy*dy);
+   return Math.sqrt(dx*dx + dy*dy);
 }
