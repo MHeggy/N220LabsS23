@@ -21,5 +21,6 @@ let sandwich = {
     weight: 5,
     cheese: true,
     bread: true,
-    meat: true,
+    meatType: "turkey",
+    meatWeight: 12,
 }
