@@ -1,15 +1,25 @@
 //Initializing x and y arguments.
-let xPos = 400;
-let yPos = 300;
+let xPos = 0;
+let yPos = 0;
 //Creating Background and Canvas
 function setup() {
     createCanvas(800,600);
     background('black');
 }
-//Drawing a car by combining simplistic shapes together.
+//Initializing the function to fit proper paremeters.
 function draw() {
-    rect(xPos, 300, yPos - 200, 30);
-    circle(xPos + 10, yPos + 42, 25);
-    circle(xPos + 90, yPos + 42, 25);
-    triangle(xPos + 40, yPos, xPos + 40, yPos - 40, xPos + 100, yPos);
+    drawCar(mouseX, mouseY);
+    drawCar(mouseX + 60, mouseY + 60);
+    drawCar(mouseX - 60, mouseY - 60);
+}
+//Setting up the drawCar function.
+function drawCar(xPos, yPos) {
+    //Back wheel of car.
+    circle(xPos + 10, yPos + 30, 25);
+    //Front wheel of car.
+    circle(xPos + 50, yPos + 30, 25);
+    //Body of the car.
+    rect(xPos, yPos, 75, 30);
+    //"Pilot/Cabin" of the car.
+    triangle(xPos + 30, yPos, xPos + 30, yPos - 30, xPos + 60, yPos);
 }
