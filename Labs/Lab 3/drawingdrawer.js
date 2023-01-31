@@ -1,10 +1,3 @@
-//Setting up object (car)
-let car = {
-    x: xMouse,
-    y: yMouse,
-    xSpeed: 6,
-    ySpeed: 6,
-}
 
 //Creating Background and Canvas
 function setup() {
