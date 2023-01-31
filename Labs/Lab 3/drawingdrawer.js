@@ -6,5 +6,6 @@ function setup() {
 }
 //Drawing a car.
 function draw() {
-    rect(400, 300, 45, 30)
+    rect(400, 300, 45, 30);
+    circle(390, 310, 25)
 }
