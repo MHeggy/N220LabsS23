@@ -1,13 +1,15 @@
-
+//Initializing x and y arguments.
+let xPos = 400;
+let yPos = 300;
 //Creating Background and Canvas
 function setup() {
     createCanvas(800,600);
     background('black');
 }
-//Drawing a car.
+//Drawing a car by combining simplistic shapes together.
 function draw() {
-    rect(400, 300, 100, 30);
-    circle(410, 342, 25);
-    circle(490, 342, 25);
-    triangle(440, 300, 440, 260, 500, 300);
+    rect(xPos, 300, yPos - 200, 30);
+    circle(xPos + 10, yPos + 42, 25);
+    circle(xPos + 90, yPos + 42, 25);
+    triangle(xPos + 40, yPos, xPos + 40, yPos - 40, xPos + 100, yPos);
 }
