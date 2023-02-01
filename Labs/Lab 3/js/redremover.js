@@ -1,6 +1,5 @@
 //Setting up color variable and no red variables.
 let myColor;
-let newColor;
 //Setting up canvas and black background color.
 function setup() {
     createCanvas(800, 600);
@@ -10,8 +9,6 @@ function setup() {
 //
 function draw() {
     noRed();
-    newColor = noRed(myColor);
-    fill(newColor);
 }
 //Setting up noRed Function
 function noRed() {
