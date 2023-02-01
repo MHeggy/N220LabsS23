@@ -7,10 +7,11 @@ function setup() {
     background('black');
     myColor = fill(170, 200, 150);
 }
+//
 function draw() {
-    circle(400, 300, 50);
-    fill(0, 200, 150);
-    let newColor = noRed(myColor);
+    noRed();
+    newColor = noRed(myColor);
+    fill(newColor);
 }
 //Setting up noRed Function
 function noRed() {
