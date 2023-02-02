@@ -9,12 +9,11 @@ function setup() {
 }
 //
 function draw() {
-    noRed();
+    circle(400, 300, 50);
+    noRed(myColor);
 }
 //Setting up noRed Function
-function noRed() {
-    circle(400, 300, 50);
+function noRed(myColor) {
     myColor.setRed(0);
-    newColor = myColor.setRed(0);
     fill(myColor);
 }

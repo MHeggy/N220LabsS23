@@ -3,7 +3,6 @@ let bike = {
     wear: 0,
 }
 
-
 function ageUp(bike) {
     bike.age = bike.age + 1;
     if(bike.age >= 5) {
@@ -18,7 +17,6 @@ function tenyears(bike) {
     }
 }
 
-ageUp(bike);
-ageUp(bike);
+tenyears(bike);
 
 console.log(bike);
