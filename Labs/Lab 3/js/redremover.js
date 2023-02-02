@@ -5,15 +5,16 @@ let newColor;
 function setup() {
     createCanvas(800, 600);
     background('black');
-    myColor = fill(170, 200, 150);
+    myColor = color(170, 200, 150);
 }
-//
+//Setting up draw function for my circle.
 function draw() {
+    myColor = noRed(myColor);
+    fill(myColor);
     circle(400, 300, 50);
-    noRed(myColor);
 }
 //Setting up noRed Function
 function noRed(myColor) {
     myColor.setRed(0);
-    fill(myColor);
+    return(myColor);
 }
