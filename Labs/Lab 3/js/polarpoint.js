@@ -1,7 +1,6 @@
 //Initializing my variables for radius, x, and y.
 let r = 10;
 let res = {x: polarPoint(x), y: polarPoint(y),}
-let angle;
 //Setting up the Canvas and Background for my circle to be drawn.
 function setup() {
     createCanvas(800, 600);
