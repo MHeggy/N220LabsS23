@@ -7,7 +7,7 @@ function setup() {
     background('black');
     myColor = color(170, 200, 150);
 }
-//Setting up draw function for my circle.
+//
 function draw() {
     myColor = noRed(myColor);
     fill(myColor);
