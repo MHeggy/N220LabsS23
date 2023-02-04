@@ -14,7 +14,7 @@ function setup() {
 //Now setting up the function to draw circle and have it bounce off walls.
 function draw() {
     background('black')
-    //Making the ball
+    //Making the ball.
     circle(x, y, 40)
     //Motion
     x = x + (directionX * speedX)

@@ -6,21 +6,26 @@ let canvas_2 = {x: 800, y: 600}
 //Function setup section.
 function setup() {
     createCanvas(canvas_2.x, canvas_2.y);
+    //Drawing 2 Objects.
+    drawObjects();
+    //Motion
+    motion();
 }
 function draw() {
-    //Adding background color.
+    //Filling background.
     background('black');
-    //Drawing two objects.
-    rect(object_1.x + 10, object_1.y + 300, object_1.width, object_1.height);
-    rect(object_2.x + 760, object_2.y + 300, object_2.width, object_2.height);
+    //Drawing 2 Objects.
+    drawObjects();
     //Motion
-    movedown();
-    moveup();
+    motion();
+    //Change in direction.
+    movedown(object_1, object_2);
+    moveup(object_1, object_2);
 }
 //Setting up the functions to move:
-function moveup() {
+function moveup(object_1, object_2) {
     if(keyIsDown(UP_ARROW)) {
-        //Motion.
+        //Object 1 and 2 movement.
         object_1.y = object_1.y + (object_1.speedY * object_1.directionY);
         object_2.y = object_2.y + (object_2.speedY * object_2.directionY);
         //Setting up change in direction.
@@ -28,13 +33,21 @@ function moveup() {
         object_2.directionY = object_2.directionY * -1;
     }
 }
-function movedown() {
+function movedown(object_1, object_2) {
     if(keyIsDown(DOWN_ARROW)) {
-        //Motion.
-        object_1.y = object_1.y + (object_1.speedY * object_1.directionY);
-        object_2.y = object_2.y + (object_2.speedY * object_2.directionY);
         //Direction change.
         object_1.directionY = object_1.directionY*-1;
         object_2.directionY = object_2.directionY*-1;
     }
+}
+function motion() {
+    //Object 1 and 2 movement.
+    object_1.y = object_1.y + (object_1.speedY * object_1.directionY);
+    object_2.y = object_2.y + (object_2.speedY * object_2.directionY);
+}
+//Draw Objects function.
+function drawObjects() {
+    //Drawing two objects.
+    rect(object_1.x, object_1.y + 300, object_1.width, object_1.height);
+    rect(object_2.x + 760, object_2.y + 300, object_2.width, object_2.height);
 }
