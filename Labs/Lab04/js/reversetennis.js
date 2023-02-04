@@ -12,11 +12,14 @@ function setup() {
 function moveup(object_1) {
     if(keyIsDown(UP_ARROW)) {
         //Setting up motion.
-        object_1.x = (object_1.speedX * object_1.directionX)
+        object_1.x = (object_1.speedY * object_1.directionX)
     }
 }
 function movedown() {
     if(keyIsDown(DOWN_ARROW)) {
 
     }
+}
+function draw() {
+    rect(object_1.)
 }
