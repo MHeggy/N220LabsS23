@@ -4,7 +4,7 @@
 //I can expect the code to start with setting up the object and the associated parameters, that I have not yet decided on. But, there are plenty of things that I can do here and the freedom that has been provided to me in this assignment makes me excited!
 //For this assignment, I'm going to draw a person who is simply present within a setting where there will be a road and a person that is walking on said road.
 //Code start: 
-//Let person = {width: 80px, height: 100px, weight: 150, posx: 250, posy: 300}
+//Let person = {width: 80px, height: 100px, weight: 150, posx: 250, posy: 300 color: 'red',}
 //Let road = {width: 150px, height: 20px, num_lines: 4}
 //function setup() {
     //createCanvas(1000,700)
