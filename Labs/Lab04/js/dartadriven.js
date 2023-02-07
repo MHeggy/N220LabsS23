@@ -8,7 +8,7 @@ function setup() {
     createCanvas(canvas.x, canvas.y);
 }
 function draw() {
-    background('blue');
+    background(canvas.color);
     drawPerson(person);
     drawRoad(road);
     drawSun(sun);
