@@ -1,7 +1,6 @@
+let randomNumArray = [min = 1, max = 1];
 function randomInt(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(26);
-    return Math.floor(Math.random() * (26-1) + 1);
+    return Math.floor(Math.random() * (randomNumArray.max) + randomNumArray.min);
 }
 let randomNum = randomInt(1,25); //returns random integer between 1 and 25.
 console.log(randomNum);
