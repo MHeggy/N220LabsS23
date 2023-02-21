@@ -1,6 +1,5 @@
 //Initializing Variables
 let d = document.getElementById("peakPixels");
-let d = document.createElement("div");
 let div_1 = {height: 100, width: 100, color_background: 'green'}
 //Now setting up the height and width of the div and background color.
 d.style.width = div_1.width + "px";
