@@ -10,4 +10,11 @@ function changeColor() {
 }
 function changeBack() {
     d.style.backgroundColor = "blue";
+}let d = document.createElement("div");
+d.style.width = 100 + "px";
+d.style.height = 100 + "px";
+d.style.backgroundColor = "blue";
+
+function changeColor() {
+    d.style.backgroundColor = "black";
 }

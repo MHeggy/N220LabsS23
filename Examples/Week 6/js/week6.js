@@ -21,7 +21,17 @@ for (i = 0; i < 5; i++) {
     d.innerHTML = `Div ${i}`;
     document.body.appendChild(d);
 }
-//Arrays are a collection of variables.
+//Arrays are a collection of variables. For example, there are a bunch of students in an array.
 //Arrays are indexed
 //Array indexes start at zero(0), and progress upwards.
 //To get an item out of the array, use the square brackets and the index.
+//Good example of an array.
+let myArray = ["laser","coat","sky","spoon","dog"];
+let myEmptyArray = [];
+myArray[0]; // laser.
+myArray[2]; // sky.
+//Arrays start at 0, not 1 so get it through your thick skull that we must start at 0.
+//Must separate values with commas in an array.
+console.log( myArray[0] ); // "laser"
+myArray[0] = "post";
+console.log( myArray[0] ); // "post"
