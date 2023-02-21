@@ -1,22 +1,25 @@
-let randomNumArray = [min = 1, max = 1];
+let randomNumArray = [1, 25];
 function randomInt(min, max) {
-    return Math.floor(Math.random() * (randomNumArray.max) + randomNumArray.min);
+    return Math.floor(Math.random() * (randomNumArray[1]) + randomNumArray[0]);
 }
 let randomNum = randomInt(1,25); //returns random integer between 1 and 25.
 console.log(randomNum);
 let div = document.getElementById("beepbop");
 //Setting up the loop to display the randomNum and beep, bop, or beepbop.
-for(i = 0; i <= 25; i++) {
-    div.innerHTML = randomNum;
-    if(randomNum == randomNum[2],randomNum[5],randomNum[8],randomNum[11],randomNum[17],randomNum[20],randomNum[23]) {
-        div.innerHTML += " beep ";
+for(i = 1; i <= 25; i++) {
+    //If statement for the numbers divisble by 3.
+    if(randomNum == 3 || randomNum == 6 || randomNum == 9 || randomNum == 12 || randomNum == 18 || randomNum == 21 || randomNum == 24) {
+        div.innerHTML = randomNum + " beep ";
     }
-    else if(randomNum == 5,10,15,20,25) {
-        div.innerHTML += " bop ";
+    //Else if statement setup for the numbers that are divisible by 5.
+    else if(randomNum == 5 || randomNum == 10 || randomNum == 20 || randomNum == 25) {
+        div.innerHTML = randomNum + " bop ";
     }
-    else if(randomNum == randomNum[14]) {
-        div.innerHTML += " beepbop ";
+    //Another else if statement that is setup for the beepbop for 15 which is divisible by 5 AND 3.
+    else if(randomNum == 15) {
+        div.innerHTML = randomNum + " beepbop ";
     }
+    //Final else statement setup for any number that is not divisible by 3 or 5.
     else {
         div.innerHTML = randomNum;
     }
