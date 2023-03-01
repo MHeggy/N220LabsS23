@@ -1,45 +1,84 @@
-let RPGS = [document.getElementById("rock"), document.getElementById("paper"), document.getElementById("scissors"), document.getElementById("guard")];
-let scorePlayer = document.getElementById("scorecardPlayer");
-let scoreComputer = document.getElementById("scorecardComputer");
-let computerChoice = Rand.floor(Rand.math()*4 + 1);
-let playerChoice = "";
-function computer(computerChoice) {
-if(computerChoice == 0) {
-    computerChoice = RPGS[0]; //computer choses Rock.
-}
-else if(computerChoice == 1) {
-    computerChoice = RPGS[1]; //computer choses Paper.
-}
-else if(computerChoice == 2) {
-    computerChoice = RPGS[2]; //computer choses Scissors.
-}
-else {
-    computerChoice = RPGS[3]; //computer choses Guard.
-}
-}
-function winner(computerChoice, playerChoice) {
-    if(playerChoice == "rock" && computerChoice == 0) {
-        scoreComputer.innerHTML = 1;
-        scorePlayer.innerHTML = 1;
+//Initializing all my variables using const.
+const computer = document.getElementById("computerChoice");
+const playerChoice = document.getElementById("userChoice");
+const choices = document.querySelectorAll("button");
+let playerScore = document.getElementById("scorecardUser")
+let computerScore = document.getElementById("scorecardComputer");
+let computerChoice;
+var scoreComp = 0.0
+var scorePlayer = 0.0
+//Adding event listener for buttons.
+choices.forEach(choice => choice.addEventListener("click", (e) => {
+    userChoice = e.target.id;
+    playerChoice.innerHTML = userChoice;
+    randomComputerChoice();
+    if(userChoice == "rock") {
+        userChoice = "rock";
     }
-    else if(playerChoice == "rock" && computerChoice == 1) {
-        scoreComputer.innerHTML += 1;
-        scorePlayer.innerHTML += 0;
+    if(userChoice == "paper") {
+        userChoice = "paper";
     }
-    else if(playerChoice == "rock" && computerChoice == 2) {
-        scoreComputer.innerHTML += 0;
-        scorePlayer.innerHTML += 1;
+    if(userChoice == "scissors") {
+        userChoice = "scissors";
     }
-    else if(playerChoice == "paper" && computerChoice == 0) {
-        scoreComputer.innerHTML += 0;
-        scorePlayer.innerHTML += 1;
+    if(userChoice == "guard") {
+        userChoice = "guard";
     }
-    else if(playerChoice == "paper" && computerChoice == 1) {
-        scoreComputer.innerHTML += 1;
-        scorePlayer.innerHTML += 0;
+    console.log(userChoice)
+    results(computerChoice, userChoice);
+    
+}))
+
+function randomComputerChoice() {
+    const randomNumber = Math.floor(Math.random() * 4) + 0;
+    console.log(randomNumber);
+    if(randomNumber == 0) {
+        computerChoice = "rock"; //randomNumber = 0 then computerChoice is rock.
     }
-    else if(playerChoice == "paper" && computerChoice == 2) {
-        scoreComputer.innerHTML += 1;
-        scorePlayer.innerHTML += 0;
+    if(randomNumber == 1) {
+        computerChoice = "paper"; //randomNumber = 1 then computerChoice is paper.
+    }
+    if(randomNumber == 2) {
+        computerChoice = "scissors"; //randomNumber = 2 then computerChoice is scissors.
+    }
+    if(randomNumber == 3) {
+        computerChoice = "guard"; //randomNumber = 3 then computerChoice is guard.
+    }
+    computer.innerHTML = computerChoice;
+}
+
+function results(computerChoice, userChoice) {
+    if(computerChoice == userChoice) {
+        
+    }
+    else if(computerChoice == "rock" && userChoice == "paper") {
+            playerScore.innerHTML = ++scorePlayer
+            computerScore.innerHTML = scoreComp
+    }
+    else if(computerChoice == "rock" && userChoice == "scissors") {
+            computerScore.innerHTML = ++scoreComp
+            playerScore.innerHTML = scorePlayer;
+        }
+    else if(computerChoice == "paper" && userChoice == "rock") {
+            computerScore.innerHTML = ++scoreComp
+            playerScore.innerHTML = scorePlayer;
+        
+    }
+    else if(computerChoice == "scissors" && userChoice == "paper") {
+            computerScore.innerHTML = ++scoreComp;
+            playerScore.innerHTML = scorePlayer;
+    }
+    else if(computerChoice == "scissors" && userChoice == "rock") {
+            playerScore.innerHTML = ++scorePlayer;
+            computerScore.innerHTML = scoreComp;
+    }
+    else if(computerChoice == "guard") {
+        computerScore.innerHTML = --scoreComp;
+    }
+    else if(userChoice == "guard") {
+        playerScore.innerHTML = --scorePlayer;
     }
 }
+
+
+
