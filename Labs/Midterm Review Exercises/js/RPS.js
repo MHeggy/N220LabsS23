@@ -5,8 +5,8 @@ const choices = document.querySelectorAll("button");
 let playerScore = document.getElementById("scorecardUser")
 let computerScore = document.getElementById("scorecardComputer");
 let computerChoice;
-var scoreComp = 0.0
-var scorePlayer = 0.0
+var scoreComp = 0.0.toFixed(1);
+var scorePlayer = 0.0.toFixed(1);
 //Adding event listener for buttons.
 choices.forEach(choice => choice.addEventListener("click", (e) => {
     userChoice = e.target.id;
@@ -52,15 +52,15 @@ function results(computerChoice, userChoice) {
         
     }
     else if(computerChoice == "rock" && userChoice == "paper") {
-            playerScore.innerHTML = ++scorePlayer
-            computerScore.innerHTML = scoreComp
+            playerScore.innerHTML = ++scorePlayer;
+            computerScore.innerHTML = scoreComp;
     }
     else if(computerChoice == "rock" && userChoice == "scissors") {
-            computerScore.innerHTML = ++scoreComp
+            computerScore.innerHTML = ++scoreComp;
             playerScore.innerHTML = scorePlayer;
         }
     else if(computerChoice == "paper" && userChoice == "rock") {
-            computerScore.innerHTML = ++scoreComp
+            computerScore.innerHTML = ++scoreComp;
             playerScore.innerHTML = scorePlayer;
         
     }
@@ -73,10 +73,10 @@ function results(computerChoice, userChoice) {
             computerScore.innerHTML = scoreComp;
     }
     else if(computerChoice == "guard") {
-        computerScore.innerHTML = --scoreComp;
+        computerScore.innerHTML = -0.5 + scoreComp;
     }
     else if(userChoice == "guard") {
-        playerScore.innerHTML = --scorePlayer;
+        playerScore.innerHTML = -0.5 + scorePlayer;
     }
 }
 
