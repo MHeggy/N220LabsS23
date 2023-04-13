@@ -1,23 +1,28 @@
-let boxes = document.querySelectorAll("divs")
-//Div 1 Style
-boxes.style.width = 200 + "px";
-boxes.style.height = 200 + "px";
-boxes.style.backgroundColor = "grey";
-boxes.style.cssFloat = "left";
-boxes.style.display = "inline-block";
+let div1 = document.getElementById("div-1");
+let div2 = document.getElementById("div-2");
+let div3 = document.getElementById("div-3");
+//Div 1 styles.
+div1.style.height = 200 + "px";
+div1.style.width = 200 + "px";
+div1.style.backgroundColor = "grey";
+//Div 2 styles.
+div2.style.height = 200 + "px";
+div2.style.width = 200 + "px";
+div2.style.backgroundColor = "grey";
+//Div 3 styles.
+div3.style.height = 200 + "px";
+div3.style.width = 200 + "px";
+div3.style.backgroundColor = "grey";
 
-boxes.addEventListener('click', (e)=> {
-    boxes.forEach((box, index) => {
-        if(e.target === box) {
-            if(index == 0) {
-                box.style.backgroundColor = 'red';
-            }
-            else if(index == 1) {
-                box.style.backgroundColor = 'black';
-            }
-            else if(index == 2) {
-                box.style.backgroundColor = 'green';
-            }
-        }
-    })
+document.addEventListener("click", (e) => {
+    if(e.target.id == "div-1") {
+        div1.style.backgroundColor = "blue";
+    }
+    if(e.target.id == "div-2") {
+        div2.style.backgroundColor = "black";
+    }
+    if(e.target.id == "div-3") {
+        div3.style.backgroundColor = "red";
+    }
+
 })
