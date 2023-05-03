@@ -1,0 +1,90 @@
+#board {
+    width: 1000px;
+    height: 800px;
+    position: relative;
+}
+#draw {
+    top: 20px;
+    left: 20px;
+}
+#discard {
+    top: 20px;
+    left: 120px;
+}
+#foundation-1 {
+    top: 20px;
+    left: 220px;
+    background-color: lightblue;
+    height: 50px;
+    width: 50px;
+}
+#foundation-2 {
+    top: 20px;
+    left: 320px;
+    background-color: lightblue;
+    height: 50px;
+    width: 50px;
+}
+#foundation-3 {
+    top: 20px;
+    left: 420px;
+    background-color: lightblue;
+    height: 50px;
+    width: 50px;
+}
+#foundation-4 {
+    top: 20px;
+    left: 520px;
+    background-color: lightblue;
+    height: 50px;
+    width: 50px;
+}
+#tableau-1 {
+    top: 150px;
+    left: 20px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-2 {
+    top: 150px;
+    left: 120px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-3 {
+    top: 150px;
+    left: 220px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-4 {
+    top: 150px;
+    left: 320px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-5 {
+    top: 150px;
+    left: 420px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-6 {
+    top: 150px;
+    left: 520px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
+#tableau-7 {
+    top: 150px;
+    left: 620px;
+    background-Color: red;
+    height: 50px;
+    width: 50px;
+}
